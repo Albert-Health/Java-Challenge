@@ -8,6 +8,11 @@ Created Base class which the other entity classes are extended from.
 ![uml diagram](./basic_uml.png)
 
 #### B - Manage The Data
+
+Changed properties file to yaml.
+Flyway queries added. 
+Repository and Service classes added.
+
 #### C - Expose data with a RESTful API
 #### D - Scheduled Task
 #### E - Improvements
