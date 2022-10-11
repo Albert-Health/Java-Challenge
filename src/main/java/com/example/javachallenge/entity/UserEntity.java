@@ -8,7 +8,7 @@ import lombok.Setter;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import java.util.Date;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "users")
@@ -21,7 +21,6 @@ public class UserEntity {
     private String username;
     private String email;
     private String password;
-    private Date createdAt;
-    private Date deletedAt;
-
+    private LocalDateTime createdAt;
+    private LocalDateTime deletedAt;
 }

@@ -10,12 +10,14 @@ import lombok.Setter;
 @NoArgsConstructor
 public class Slot {
     private Long id;
+    private Long userId;
     private String description;
 
     public static Slot toModel(SlotEntity slotEntity) {
         Slot slot = new Slot();
         slot.setId(slotEntity.getId());
         slot.setDescription(slotEntity.getDescription());
+        slot.setUserId(slotEntity.getUserId());
         return slot;
     }
 }

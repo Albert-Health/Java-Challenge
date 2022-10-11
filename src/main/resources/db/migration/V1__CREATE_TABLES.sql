@@ -9,9 +9,19 @@ CREATE TABLE users (
   );
   CREATE TABLE slots (
      id             SERIAL PRIMARY KEY,
+     user_id        Integer,
      description    TEXT,
      created_at     TIMESTAMP,
      deleted_at     TIMESTAMP
+
+  );
+  CREATE TABLE user_slots (
+     id                 SERIAL PRIMARY KEY,
+     user_id            INTEGER,
+     slot_id            INTEGER,
+     appointment_time   TIMESTAMP,
+     created_at         TIMESTAMP,
+     deleted_at         TIMESTAMP
 
   );
 
