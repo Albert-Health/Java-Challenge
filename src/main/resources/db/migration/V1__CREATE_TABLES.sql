@@ -7,3 +7,4 @@ CREATE TABLE users (
      deleted_at     TIMESTAMP
 
   );
+
