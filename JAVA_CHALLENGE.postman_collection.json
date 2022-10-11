@@ -1,0 +1,162 @@
+{
+	"info": {
+		"_postman_id": "137677cc-1118-4760-a0c8-132cdb14da07",
+		"name": "JAVA_CHALLENGE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Available Slots",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/slot/available?userId=1",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"slot",
+						"available"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Slot",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/slot/create?userId=1&startTime=2022-09-12T20:30:00&endTime=2022-09-12T21:30:00",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"slot",
+						"create"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "1"
+						},
+						{
+							"key": "startTime",
+							"value": "2022-09-12T20:30:00"
+						},
+						{
+							"key": "endTime",
+							"value": "2022-09-12T21:30:00"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Book an Appointment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/slot/book?userId=1&slotId=6",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"slot",
+						"book"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "1"
+						},
+						{
+							"key": "slotId",
+							"value": "6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/user/list",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"user",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Detail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/user/detail?id=1",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"user",
+						"detail"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "localhost:8080",
+			"type": "default"
+		}
+	]
+}

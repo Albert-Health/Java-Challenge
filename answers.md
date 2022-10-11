@@ -14,5 +14,15 @@ Flyway queries added.
 Repository and Service classes added.
 
 #### C - Expose data with a RESTful API
+
+Controllers added. (Used RequestParams to ease of use with Postman.)\
+Check for conflicts when creating new slot.\
+Check for trying to book user's own slot.\
+Exception types created.
+
+Exception messages are written directly to response instead of JSON as it shows the message clear on Postman. 
+
+Importable postman collection added to main directory.
+
 #### D - Scheduled Task
 #### E - Improvements

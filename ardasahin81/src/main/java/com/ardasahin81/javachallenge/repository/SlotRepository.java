@@ -8,4 +8,6 @@ public interface SlotRepository extends BaseRepository<Slot> {
 
     List<Slot> findByOwnerIdAndBookedByNull(Long userId);
 
+    List<Slot> findByBookedByNull();
+
 }
