@@ -2,7 +2,6 @@ package com.ardasahin81.javachallenge.domain;
 
 import com.fasterxml.jackson.annotation.JsonIdentityReference;
 import lombok.Getter;
-import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
@@ -12,7 +11,6 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @ToString(exclude = {"owner", "bookedBy"})
-@RequiredArgsConstructor
 @Entity
 @Table(name = "challenge_slot", uniqueConstraints = @UniqueConstraint(columnNames = {"startTime", "ownerId"}))
 public class Slot extends Base {
