@@ -5,6 +5,7 @@ import com.example.javachallenge.service.SlotService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
@@ -18,7 +19,7 @@ public class SlotController {
     }
 
     @GetMapping("all")
-    public ResponseEntity getAll() {
+    public ResponseEntity<List<Slot>> getAll() {
         var slotEntities = slotService.getAllSlots();
         var slots = slotEntities.stream().map(Slot::toModel).collect(Collectors.toList());
         return ResponseEntity.ok(slots);

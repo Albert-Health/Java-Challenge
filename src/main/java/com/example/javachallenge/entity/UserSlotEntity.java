@@ -23,15 +23,9 @@ public class UserSlotEntity {
     private Long userId;
     private Long slotId;
     private LocalDateTime appointmentTime;
+    private Boolean reminded;
     private LocalDateTime createdAt ;
     private LocalDateTime deletedAt;
 
-    public void appointmentTimeToString() {
-        long diff = getAppointmentTime().compareTo(LocalDateTime.now().minusMinutes(15));
-        if (diff >= 0) {
-            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm");
-            System.out.println("User with ID " + getUserId() + " has appointment with slot ID " + getSlotId() +" at "+getAppointmentTime().format(formatter) + " today");
 
-        }
-    }
 }

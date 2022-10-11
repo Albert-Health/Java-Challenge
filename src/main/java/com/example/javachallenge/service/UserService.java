@@ -32,9 +32,10 @@ public class UserService {
         return (List)userRepository.findAll();
     }
 
-    public UserSlotEntity createAppointment(Long userId, Long slotId) {
+    public UserSlotEntity createAppointment(Long userId, Long slotId, LocalDateTime localDateTime) {
         var user = userRepository.findById(userId);
         var slot = slotRepository.findById(slotId);
+
         if (user.isEmpty()) {
             throw new UserMissingException();
         }
@@ -43,11 +44,12 @@ public class UserService {
         }
         var entity = new UserSlotEntity();
 
+        entity.setAppointmentTime(localDateTime);
         entity.setUserId(userId);
         entity.setSlotId(slotId);
         var localtime = LocalDateTime.now();
+        entity.setReminded(false);
         entity.setCreatedAt(localtime);
-        entity.setAppointmentTime(localtime.plusMinutes(15));
         var response = userSlotRepository.save(entity);
 
         return response;

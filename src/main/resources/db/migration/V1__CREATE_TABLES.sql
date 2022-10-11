@@ -20,6 +20,7 @@ CREATE TABLE users (
      user_id            INTEGER,
      slot_id            INTEGER,
      appointment_time   TIMESTAMP,
+     reminded           BOOLEAN NOT NULL DEFAULT FALSE,
      created_at         TIMESTAMP,
      deleted_at         TIMESTAMP
 
