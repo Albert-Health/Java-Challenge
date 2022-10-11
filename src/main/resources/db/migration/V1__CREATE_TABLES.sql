@@ -7,4 +7,11 @@ CREATE TABLE users (
      deleted_at     TIMESTAMP
 
   );
+  CREATE TABLE slots (
+     id             SERIAL PRIMARY KEY,
+     description    TEXT,
+     created_at     TIMESTAMP,
+     deleted_at     TIMESTAMP
+
+  );
 

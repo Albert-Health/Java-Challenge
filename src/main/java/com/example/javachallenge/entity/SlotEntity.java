@@ -1,6 +1,5 @@
 package com.example.javachallenge.entity;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -11,17 +10,14 @@ import javax.persistence.Table;
 import java.util.Date;
 
 @Entity
-@Table(name = "users")
+@Table(name = "slots")
 @Getter
 @Setter
 @NoArgsConstructor
-public class UserEntity {
+public class SlotEntity {
     @Id
     private Long id;
-    private String username;
-    private String email;
-    private String password;
+    private String description;
     private Date createdAt;
     private Date deletedAt;
-
 }
