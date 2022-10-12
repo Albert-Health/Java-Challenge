@@ -29,3 +29,6 @@ Importable postman collection added to main directory.
 Added scheduled task for every minute. This task gets booked slots that will start at 15 minutes from now and simply writes a log about it.
 
 #### E - Improvements
+
+Authentication can be added. \
+It wasn't part of the challenge but removing/unbooking slots could be added.
