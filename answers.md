@@ -25,4 +25,7 @@ Exception messages are written directly to response instead of JSON as it shows 
 Importable postman collection added to main directory.
 
 #### D - Scheduled Task
+
+Added scheduled task for every minute. This task gets booked slots that will start at 15 minutes from now and simply writes a log about it.
+
 #### E - Improvements

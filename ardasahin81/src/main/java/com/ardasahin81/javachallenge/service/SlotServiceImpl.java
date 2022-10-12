@@ -31,6 +31,11 @@ public class SlotServiceImpl extends BaseServiceImpl<Slot, SlotRepository> imple
     }
 
     @Override
+    public List<Slot> getBookedSlotsBetween(LocalDateTime time1, LocalDateTime time2) {
+        return getRepository().findByBookedByNotNullAndStartTimeBetween(time1, time2);
+    }
+
+    @Override
     public Slot createNewSlot(Long userId, LocalDateTime startTime, LocalDateTime endTime) {
         if (!endTime.isAfter(startTime)) {
             throw new SlotTimeException();

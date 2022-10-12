@@ -11,6 +11,8 @@ public interface SlotService extends BaseService<Slot> {
 
     List<Slot> getFreeSlots();
 
+    List<Slot> getBookedSlotsBetween(LocalDateTime time1, LocalDateTime time2);
+
     Slot createNewSlot(Long userId, LocalDateTime startTime, LocalDateTime endTime);
 
     Slot bookSlot(Long slotId, Long userId);
