@@ -8,6 +8,9 @@ The image can be found with name UML.png
 
 #### B - Manage The Data
 
+The project created at https://start.spring.io/ 
+Models and repositories created for User, Slot, Booking.
+
 #### C - Expose data with a RESTful API
 
 #### D - Scheduled Task
