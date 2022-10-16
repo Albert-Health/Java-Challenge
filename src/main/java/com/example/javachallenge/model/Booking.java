@@ -1,5 +1,6 @@
 package com.example.javachallenge.model;
 
+import com.example.javachallenge.util.TimeUtil;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
@@ -25,6 +26,6 @@ public class Booking {
         this.id = slot.id;
         this.slot = slot;
         this.user = user;
-        this.bookTime = System.currentTimeMillis() / 1000;
+        this.bookTime = TimeUtil.nowInSeconds();
     }
 }
