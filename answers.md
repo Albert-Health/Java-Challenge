@@ -29,4 +29,6 @@ Requests tested with Postman manually.
 
 #### D - Scheduled Task
 
+In NotifyService class appointments notified.
+
 #### E - Improvements
