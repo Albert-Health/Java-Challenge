@@ -32,3 +32,7 @@ Requests tested with Postman manually.
 In NotifyService class appointments notified.
 
 #### E - Improvements
+
+No security implementation done, login and authentications can be added, and while creating slot we would be don't have to set slot owner userId.
+
+More exception handling can be done and callers can have some information on conflict or other status codes.
