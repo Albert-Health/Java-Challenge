@@ -1,0 +1,19 @@
+version: '3.8'
+volumes:
+  postgres_data:
+    driver: local
+services:
+  postgresql_db:
+    image: 'postgres'
+    container_name: postgresql_db
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=appointment_management
+    ports:
+      - "5435:5432"
+  redis:
+    image: "redis:alpine"
+    command: redis-server --requirepass redisPassword
+    ports:
+      - "6380:6379"

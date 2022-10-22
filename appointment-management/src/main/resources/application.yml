@@ -1,0 +1,75 @@
+server:
+  port: 8080
+  servlet:
+    contextPath: /api/appointment-management
+
+spring:
+  datasource:
+    url: jdbc:postgresql://0.0.0.0:5435/appointment_management?useUnicode=yes&characterEncoding=UTF-8
+    username: postgres
+    password: postgres
+    continue-on-error: false
+  management:
+    endpoint:
+      health:
+        show-details: always
+    endpoints:
+      web:
+        exposure:
+          include:
+            - health
+            - info
+            - metrics
+            - prometheus
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database: POSTGRESQL
+    properties:
+      hibernate:
+        enable_lazy_load_no_trans: true
+        jdbc:
+          batch-size: 400
+          lob:
+            non_contextual_creation: true
+        format_sql: false
+        order_inserts: true
+    show-sql: false
+  jackson:
+    serialization:
+      INDENT_OUTPUT: true
+    date-format: com.fasterxml.jackson.databind.util.StdDateFormat
+    default-property-inclusion: non_null
+  mvc:
+    throw-exception-if-no-handler-found: true
+  thymeleaf:
+    enabled: false
+  web:
+    resources:
+      add-mappings: false
+  output:
+    ansi:
+      enabled: always
+redis:
+
+  timeSlotLockDuration: 10000
+  password: redisPassword
+  hostname: ${REDIS_HOST:localhost}
+
+adapters:
+  timeslot:
+    lock:
+      enabled: true
+# ========= Logging ========== #
+#logging:
+#  level:
+#    root: ERROR
+#    com:
+#      example:
+#        appointmentmanagement: DEBUG
+# ========= Swagger ========== #
+springfox:
+  documentation:
+    swagger:
+      v2:
+        path: /api-docs
