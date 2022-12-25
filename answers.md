@@ -1,7 +1,11 @@
 ## Please type your answers or explanations below.
 
 The project contains Swagger UI. You can visit Swagger UI and test endpoints by going
-to http://localhost:8080/swagger-ui
+to http://localhost:8080/swagger-ui \
+Notes:
+
+* Java 17 is required.
+* H2DB Console is active. You can access by: http://localhost:8080/h2-console
 
 #### A - The entities
 
