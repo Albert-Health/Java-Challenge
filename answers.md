@@ -9,6 +9,8 @@ is a slot booked.
 
 #### B - Manage The Data
 
+Generated repositories & services for Booking, Slot and User entities.
+
 #### C - Expose data with a RESTful API
 
 #### D - Scheduled Task
