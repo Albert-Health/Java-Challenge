@@ -66,4 +66,8 @@ public final class SlotService {
 
         return slotRepository.findAll(specification);
     }
+
+    public List<Slot> getBookedSlotsBetween(final Long beginTime, final Long endTime) {
+        return slotRepository.findByBookingNotNullAndBeginTimeBetween(beginTime, endTime);
+    }
 }

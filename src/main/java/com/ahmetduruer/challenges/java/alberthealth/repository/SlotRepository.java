@@ -11,4 +11,6 @@ import java.util.UUID;
 @Repository
 public interface SlotRepository extends CrudRepository<Slot, UUID> {
     List<Slot> findAll(Specification<Slot> specification);
+
+    List<Slot> findByBookingNotNullAndBeginTimeBetween(Long beginTime, Long endTime);
 }

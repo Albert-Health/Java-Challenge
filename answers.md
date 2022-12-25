@@ -21,4 +21,7 @@ Returning exceptions if an entity is not exists.
 
 #### D - Scheduled Task
 
+Added a scheduler which runs every minute. The scheduler checks meetings which has 15 minutes left and prints a log in
+console. (to be honest, not sure is this working, since didn't wait for 15 minutes)
+
 #### E - Improvements
