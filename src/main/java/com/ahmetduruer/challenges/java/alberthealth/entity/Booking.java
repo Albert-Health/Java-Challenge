@@ -19,14 +19,12 @@ public class Booking {
     @Column(nullable = false)
     private UUID id;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false, cascade = CascadeType.ALL)
-    @JoinColumn(name = "user_id", nullable = false)
+    @ManyToOne(fetch = FetchType.LAZY, optional = false, cascade = CascadeType.MERGE)
     @JsonIgnore
     private User user;
 
     @OneToOne
     @MapsId
-    @JoinColumn(name = "slot_id")
     @JsonIgnore
     private Slot slot;
 
