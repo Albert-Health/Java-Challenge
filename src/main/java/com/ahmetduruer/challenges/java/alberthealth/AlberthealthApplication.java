@@ -1,0 +1,13 @@
+package com.ahmetduruer.challenges.java.alberthealth;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class AlberthealthApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(AlberthealthApplication.class, args);
+    }
+
+}
